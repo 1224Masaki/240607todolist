@@ -1,0 +1,288 @@
+html {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /* position: relative; */
+}
+
+.roboto-slab {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.main {
+  position: relative;
+  flex-direction: row;
+  height: 500px;
+  width: 900px;
+  /* background-color: blue; */
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.left {
+  width: 50%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* justify-content: space-between; */
+  /* padding: 20px; */
+  /* height: 100px; */
+}
+
+.right {
+  width: 50%;
+  /* height: 100px; */
+  background-color: white;
+  overflow-y: scroll;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  /* padding: 20px; */
+}
+
+.memo {
+  width: 400px;
+  /* height: 150px; */
+  margin-left: 4%;
+  margin-bottom: 5%;
+  background-color: #DAE5CE;
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  line-break: anywhere;
+  word-break: break-all;
+}
+
+.content {
+  padding: 10px;
+  /* overflow: auto; */
+  white-space: initial;
+  word-wrap: break-word;
+}
+
+.output {
+  display: inline;
+  white-space: initial;
+  word-break: break-all;
+  word-wrap: break-word;
+  /* border: 1px solid black; */
+}
+
+
+.insideLeft {
+  width: 85%;
+  /* height: 76%; */
+  background-color: #DAE5CE;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  /* margin-bottom: 5pc; */
+  border-radius: 8px;
+  font-size: 13px;
+  text-align: center;
+  color: #036C89;
+}
+
+.levelfather {
+  width: 100%;
+  /* height: 76%; */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #DAE5CE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 8px;
+  margin-left: 8px;
+  margin-bottom: 8px */
+}
+
+.level {
+  width: 30%;
+  /* height: 18%; */
+  /* padding-top: 5px;
+  padding-bottom: 5px; */
+  background-color: #E88682;
+  border-radius: 30px;
+  text-align: center;
+  color: black;
+  /* margin-top: 100px; */
+  /* margin-left: 160px; */
+}
+
+#tick {
+  object-fit: contain;
+  height: 40px;
+  border-radius: 100px;
+}
+
+.insideRight {
+  width: 10%;
+  /* height: 70px; */
+  /* background-color: #206fac; */
+  /* margin-top: 55px; */
+  margin-left: 8px;
+  /* margin-top: 50px; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.tickfather {
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+}
+
+#plus {
+  width: 38px;
+  height: 38px;
+  margin-left: 42%;
+  margin-top: 90%;
+  background-color: #91A173;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  font-size: 38px;
+  color: #f3eff5;
+  /* border-color: #505358; */
+  position: absolute;
+}
+
+.task {
+  position: absolute;
+  margin-left: 28%;
+  /* margin-right: 25%; */
+  margin-top: 10%;
+  width: 180px;
+  height: 50px;
+  /* background-color: #92a1dd; */
+  text-align: center;
+  font-size: 30px;
+}
+
+.inputbox {
+  position: absolute;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 23%;
+  width: 400px;
+  height: 80px;
+  background-color: #ADC5C9;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.priority {
+  position: absolute;
+  margin-left: 28%;
+  /* margin-right: 25%; */
+  margin-top: 50%;
+  width: 180px;
+  height: 50px;
+  /* background-color: #92a1dd; */
+  text-align: center;
+  font-size: 30px;
+}
+
+.prioritybar {
+  position: absolute;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 62%;
+  width: 400px;
+  height: 30px;
+  background-color: #D0E1CF;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 860px) {
+  .main {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+  }
+
+  body {
+    height: auto;
+  }
+
+  .task,
+  .prioritybar,
+  .inputbox,
+  .priority,
+  #plus {
+    position: relative;
+    margin: 0px;
+  }
+
+  #plus {
+    margin-left: 0px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .left,
+  .right {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .left,
+  .prioritybar,
+  .inputbox,
+  .memo {
+    width: -webkit-fill-available;
+  }
+
+  .memo {
+    margin-left: 0px;
+  }
+
+  .right {
+    width: auto;
+  }
+
+  .left {
+    align-items: center;
+  }
+
+  /*
+  .right{
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 300px; 
+  } */
+}
